@@ -1,10 +1,16 @@
 public class HelloApp2 {
-    public static void main(String args[]) {
+
+    public static void main(String[] args) {
+        
+        // Assign name based on whether argument is provided
+        String name;
+
         if (args.length > 0) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
+            name = args[0];
         } else {
-            System.out.println("Hello, World!");
+            name = "World";
         }
+
+        System.out.println("Hello, " + name + "!");
     }
 }
