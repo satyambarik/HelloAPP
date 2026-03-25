@@ -1,18 +1,16 @@
 public class HelloApp3{
+
     public static void main(String[] args) {
+        
+        // Assign name based on whether argument is provided
+        String name;
 
-        String message;
-
-        // If no names are provided
-        if (args.length == 0) {
-            message = "World";
+        if (args.length > 0) {
+            name = args[0];
         } else {
-            // Join all names with comma and space
-            message = String.join(", ", args);
+            name = "World";
         }
 
-        // Single greeting
-        System.out.println("Hello, " + message + "!");
+        System.out.println("Hello, " + name + "!");
     }
 }
-

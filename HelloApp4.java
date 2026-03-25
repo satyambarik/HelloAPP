@@ -1,17 +1,18 @@
-public class HelloApp4 {
+public class HelloApp4{
     public static void main(String[] args) {
 
-        // If no arguments are passed
+        String message;
+
+        // If no names are provided
         if (args.length == 0) {
-            System.out.println("Hello, World!");
-        } 
-        else {
-            // Enhanced for loop
-            for (String name : args) {
-                System.out.println("Hello " + name);
-            }
+            message = "World";
+        } else {
+            // Join all names with comma and space
+            message = String.join(", ", args);
         }
 
+        // Single greeting
+        System.out.println("Hello, " + message + "!");
     }
-    
 }
+

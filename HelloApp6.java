@@ -6,10 +6,20 @@ public class HelloApp6 {
             System.out.println("Hello, World!");
         } 
         else {
-            // Join all names using comma delimiter
-            String names = String.join(", ", args);
+
+            String names = "";
+
+            // Enhanced for loop to combine names
+            for (String name : args) {
+                names += name + ", ";
+            }
+
+            // Remove the trailing comma and space
+            names = names.substring(0, names.length() - 2);
+
             System.out.println("Hello " + names);
         }
     }
-    
 }
+    
+
